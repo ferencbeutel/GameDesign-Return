@@ -16,7 +16,7 @@ public class Level001 : MonoBehaviour
     {
         if (player.hasFinishedTutorial && !doorToLab.isActive)
         {
-            doorToLab.isActive = true;
+            doorToLab.Activate();
         }
     }
 }

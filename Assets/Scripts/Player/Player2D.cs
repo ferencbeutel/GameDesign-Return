@@ -30,7 +30,7 @@ public class Player2D : MonoBehaviour
     {
         if (!movementLocked)
         {
-            Vector3 theFirePointFacingUpOffset = new Vector3(-0.22f, 0.4f, 0);
+            Vector3 theFirePointFacingUpOffset = new Vector3(-0.22f, 0.6f, 0);
             Vector3 theFirePointCrouchingOffset = new Vector3(0, -0.3f, 0);
 
             if (crouch && !inCrouch)

@@ -302,11 +302,11 @@
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\Scripts\AI\CarefulWalk.cs" />
     <Compile Include="Assets\Scripts\Camera\Camera2DFollow.cs" />
+    <Compile Include="Assets\Scripts\Camera\Parallax.cs" />
     <Compile Include="Assets\Scripts\Collectable\Collectable.cs" />
     <Compile Include="Assets\Scripts\Collectable\EnergyContainer.cs" />
     <Compile Include="Assets\Scripts\Collectable\EnergyTechUp.cs" />
     <Compile Include="Assets\Scripts\Collectable\RogersPlasmaWeaponTechUp.cs" />
-    <Compile Include="Assets\Scripts\Collectable\Surface\DamagingSurface.cs" />
     <Compile Include="Assets\Scripts\Damageable\Damageable.cs" />
     <Compile Include="Assets\Scripts\Door\Door.cs" />
     <Compile Include="Assets\Scripts\Door\DoorTrigger.cs" />
@@ -323,7 +323,9 @@
     <Compile Include="Assets\Scripts\Room\Room.cs" />
     <Compile Include="Assets\Scripts\Room\RoomManager.cs" />
     <Compile Include="Assets\Scripts\Room\SpawnPoint.cs" />
+    <Compile Include="Assets\Scripts\Surface\DamagingSurface.cs" />
     <Compile Include="Assets\Scripts\UI\UIHealth.cs" />
+    <Compile Include="Assets\Scripts\Util\Tuple.cs" />
     <Compile Include="Assets\Scripts\Weapon\EnergyBullet.cs" />
     <Compile Include="Assets\Scripts\Weapon\PlasmaBullet.cs" />
     <Compile Include="Assets\Scripts\Weapon\RogersEnergyWeapon.cs" />

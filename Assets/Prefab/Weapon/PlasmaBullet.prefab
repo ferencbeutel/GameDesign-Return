@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4013830641524450}
   - component: {fileID: 212987298348073686}
-  - component: {fileID: 58885507144923434}
   - component: {fileID: 50820295741711136}
   - component: {fileID: 114654830015166412}
+  - component: {fileID: 60273035163938330}
   m_Layer: 0
   m_Name: PlasmaBullet
   m_TagString: Untagged
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1646957639134020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.3188, y: -0.0012, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,8 +63,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &58885507144923434
-CircleCollider2D:
+--- !u!60 &60273035163938330
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -75,9 +75,29 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.017931163, y: -0.017930865}
-  serializedVersion: 2
-  m_Radius: 1.1455139
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.75, y: 1.75}
+    newSize: {x: 2.56, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -2.3751926, y: 0.37374157}
+      - {x: -2.3754683, y: -0.37452632}
+      - {x: -1.8749942, y: -0.87588793}
+      - {x: -0.89774936, y: -0.8745258}
+      - {x: -0.71291447, y: -0.87487406}
+      - {x: 1.8722751, y: -0.87577033}
+      - {x: 2.3760495, y: -0.3710671}
+      - {x: 2.3751082, y: 0.37657467}
+      - {x: 1.8743279, y: 0.87390804}
+      - {x: 0.95620006, y: 0.8745423}
+      - {x: -1.8754243, y: 0.87435514}
 --- !u!114 &114654830015166412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01780ed7c72343d4298ce833d8b2d62c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velX: 14
+  velX: 15
   velY: 0
   damage: 20
   facingRight: 0
@@ -128,7 +148,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4db017495c69e8140a56a0e2b669e3f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bef5301b3dac6a34b8b4f450f7f825a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

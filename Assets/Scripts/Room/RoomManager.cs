@@ -74,28 +74,37 @@ public class RoomManager : MonoBehaviour
         float maxX = -100000;
         float minY = 100000;
         float maxY = -100000;
-        foreach (Renderer renderer in activeRoom.gameObject.GetComponentsInChildren<Renderer>())
+        foreach (Transform childTransform in activeRoom.gameObject.transform)
         {
-            float rendererMinX = renderer.bounds.min.x;
-            float rendererMinY = renderer.bounds.min.y;
-            float rendererMaxX = renderer.bounds.max.x;
-            float rendererMaxY = renderer.bounds.max.y;
+            if (childTransform.gameObject.tag == "Background")
+            {
+                continue;
+            }
 
-            if (rendererMinX < minX)
+            Renderer renderer = childTransform.gameObject.GetComponent<Renderer>();
+            if (renderer != null)
             {
-                minX = rendererMinX;
-            }
-            if (rendererMinY < minY)
-            {
-                minY = rendererMinY;
-            }
-            if (rendererMaxX > maxX)
-            {
-                maxX = rendererMaxX;
-            }
-            if (rendererMaxY > maxY)
-            {
-                maxY = rendererMaxY;
+                float rendererMinX = renderer.bounds.min.x;
+                float rendererMinY = renderer.bounds.min.y;
+                float rendererMaxX = renderer.bounds.max.x;
+                float rendererMaxY = renderer.bounds.max.y;
+
+                if (rendererMinX < minX)
+                {
+                    minX = rendererMinX;
+                }
+                if (rendererMinY < minY)
+                {
+                    minY = rendererMinY;
+                }
+                if (rendererMaxX > maxX)
+                {
+                    maxX = rendererMaxX;
+                }
+                if (rendererMaxY > maxY)
+                {
+                    maxY = rendererMaxY;
+                }
             }
         }
 

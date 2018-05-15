@@ -21,6 +21,18 @@ public class Door<T> : MonoBehaviour
         doorAnimator.SetBool("isOpen", isOpen);
     }
 
+    public void Activate()
+    {
+        isActive = true;
+        doorAnimator.SetBool("isActive", isActive);
+    }
+
+    public void Deactivate()
+    {
+        isActive = false;
+        doorAnimator.SetBool("isActive", isActive);
+    }
+
     public void Close()
     {
         Debug.Log("closing door");
@@ -34,6 +46,8 @@ public class Door<T> : MonoBehaviour
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         boxCollider = gameObject.GetComponent<BoxCollider2D>();
         doorAnimator = gameObject.GetComponent<Animator>();
+
+        doorAnimator.SetBool("isActive", isActive);
     }
 
     private void Update()
