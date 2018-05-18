@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Damageable : MonoBehaviour
+public abstract class Damageable : MonoBehaviour
 {
 
     public float maxHealth;
     public bool hasIFrames = false;
+
     float currentHealth;
     float invincibilitySecondsAfterDamage = 2f;
     float timeStampLastDamageTaken = -2f;
@@ -26,8 +27,11 @@ public class Damageable : MonoBehaviour
 
     void Die()
     {
+        OnDeath();
         Destroy(gameObject, 0);
     }
+
+    public abstract void OnDeath();
 
     public float getCurrentHealth()
     {

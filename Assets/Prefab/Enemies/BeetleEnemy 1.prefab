@@ -22,10 +22,10 @@ GameObject:
   - component: {fileID: 61294055513701524}
   - component: {fileID: 50821063524551738}
   - component: {fileID: 212356028233549272}
-  - component: {fileID: 114778658791845422}
   - component: {fileID: 114186455702151210}
   - component: {fileID: 114802884043245376}
   - component: {fileID: 95063401934121090}
+  - component: {fileID: 114110918787712518}
   m_Layer: 9
   m_Name: BeetleEnemy 1
   m_TagString: Untagged
@@ -108,6 +108,25 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114110918787712518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1846536669082442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18b2e1a11c330cf479e391e284a03ab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 50
+  hasIFrames: 0
+  smallEnergyContainerDropChange: 0.3
+  bigEnergyContainerDropChange: 0.1
+  smallEnergyContainer: {fileID: 114730864287668364, guid: 404062cd76f536c41b3acef745b67a0d,
+    type: 2}
+  bigEnergyContainer: {fileID: 114730864287668364, guid: 843678df898bf6842bca33442398abe3,
+    type: 2}
 --- !u!114 &114186455702151210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,19 +143,6 @@ MonoBehaviour:
     m_Bits: 1024
   walkingSpeed: 2
   jumpingForce: 6
---- !u!114 &114778658791845422
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1846536669082442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 853ac425ff9d1344885162611e039da8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 50
-  hasIFrames: 0
 --- !u!114 &114802884043245376
 MonoBehaviour:
   m_ObjectHideFlags: 1

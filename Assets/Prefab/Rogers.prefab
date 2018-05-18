@@ -68,7 +68,6 @@ GameObject:
   - component: {fileID: 95887253184345032}
   - component: {fileID: 114088704854403010}
   - component: {fileID: 114208268047207046}
-  - component: {fileID: 114826548506620640}
   - component: {fileID: 114702043297674788}
   - component: {fileID: 61750129872121116}
   - component: {fileID: 50941782942911690}
@@ -282,6 +281,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b04c700261ed9409c7d69029f23811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  hasIFrames: 1
   spawnPoint: {fileID: 114632158898035804, guid: 3a91954c7be37064b8036152ca723ddd,
     type: 2}
   rogersEnergyWeapon: {fileID: 114043923464904630, guid: 70a42742faea8504dae742b9c6f71a60,
@@ -289,19 +290,6 @@ MonoBehaviour:
   rogersPlasmaWeapon: {fileID: 114741814606479336, guid: 24e9888c31e2eca418c42a9c6ea6dc89,
     type: 2}
   hasFinishedTutorial: 0
---- !u!114 &114826548506620640
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1772905099702116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 853ac425ff9d1344885162611e039da8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  hasIFrames: 1
 --- !u!212 &212055483750137330
 SpriteRenderer:
   m_ObjectHideFlags: 1

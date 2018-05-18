@@ -312,6 +312,7 @@
     <Compile Include="Assets\Scripts\Door\DoorTrigger.cs" />
     <Compile Include="Assets\Scripts\Door\EnergyBeamDoor.cs" />
     <Compile Include="Assets\Scripts\Door\EnergyBeamDoorTrigger.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\GameInitializer.cs" />
     <Compile Include="Assets\Scripts\Interactable\Interactable.cs" />
     <Compile Include="Assets\Scripts\Level001\EnergySwitch.cs" />

@@ -8,7 +8,7 @@ public abstract class Collectable : MonoBehaviour
 
     public abstract void OnCollection();
 
-    protected virtual void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject playerGO = GameObject.FindGameObjectWithTag("Player");
         Player player = playerGO.GetComponent<Player>();

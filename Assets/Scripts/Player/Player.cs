@@ -4,7 +4,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Damageable
 {
 
     public SpawnPoint spawnPoint;
@@ -92,15 +92,25 @@ public class Player : MonoBehaviour
             {
                 weapon.AddWeapon(Instantiate(rogersPlasmaWeapon, new Vector2(0, 0), Quaternion.identity));
             }
+            return;
         }
+
+        // first time the game is started
+        damageable.Load(damageable.maxHealth, damageable.maxHealth);
+        weapon.AddWeapon(Instantiate(rogersEnergyWeapon, new Vector2(0, 0), Quaternion.identity));
     }
 
-    private void Start()
+    private void Awake()
     {
         savefilePath = Application.persistentDataPath + "/save001.dat";
         rogers = GameObject.FindGameObjectWithTag("Player");
         damageable = rogers.GetComponent<Damageable>();
         weapon = rogers.GetComponentInChildren<WeaponController>();
+    }
+
+    public override void OnDeath()
+    {
+        Debug.Log("OH NO! ROGERS DIED...");
     }
 
     [Serializable]
