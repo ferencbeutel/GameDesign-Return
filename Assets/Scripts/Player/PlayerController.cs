@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
-using UnityStandardAssets._2D;
 
 [RequireComponent(typeof(Player2D))]
 public class PlayerController : MonoBehaviour

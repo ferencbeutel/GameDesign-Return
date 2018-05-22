@@ -31,12 +31,12 @@ public class CarefulWalk : MonoBehaviour
 
         Vector2 rightVector2 = new Vector2(trans.right.x, trans.right.y);
         bool isBlocked = Physics2D.Linecast(lineCastPos, lineCastPos + rightVector2 * 0.1f, obstacles) ||
-            Physics2D.Linecast(lineCastPos + Vector2.up * height, (lineCastPos + Vector2.up * height) + rightVector2 * 0.1f, obstacles) ||
-            Physics2D.Linecast(lineCastPos + Vector2.down * height, (lineCastPos + Vector2.down * height) + rightVector2 * 0.1f, obstacles);
+            Physics2D.Linecast(lineCastPos + Vector2.up * (height * 0.95f), (lineCastPos + Vector2.up * (height * 0.95f)) + rightVector2 * 0.1f, obstacles) ||
+            Physics2D.Linecast(lineCastPos + Vector2.down * (height * 0.95f), (lineCastPos + Vector2.down * (height * 0.95f)) + rightVector2 * 0.1f, obstacles);
 
         Debug.DrawLine(lineCastPos, lineCastPos + rightVector2 * 0.1f);
-        Debug.DrawLine(lineCastPos + Vector2.up * height, (lineCastPos + Vector2.up * height) + rightVector2 * 0.1f);
-        Debug.DrawLine(lineCastPos + Vector2.down * height, (lineCastPos + Vector2.down * height) + rightVector2 * 0.1f);
+        Debug.DrawLine(lineCastPos + Vector2.up * (height * 0.95f), (lineCastPos + Vector2.up * (height * 0.95f)) + rightVector2 * 0.1f);
+        Debug.DrawLine(lineCastPos + Vector2.down * (height * 0.95f), (lineCastPos + Vector2.down * (height * 0.95f)) + rightVector2 * 0.1f);
 
         if (isGrounded && isJumping && Time.time - jumpStartTime > 1)
         {
@@ -60,6 +60,10 @@ public class CarefulWalk : MonoBehaviour
                 jumpStartTime = Time.time;
                 body.AddForce(new Vector2(0, jumpingForce), ForceMode2D.Impulse);
                 isJumping = true;
+            } else
+            {
+                Debug.Log("would be unsafe to jump!");
+                TurnAround();
             }
         }
 

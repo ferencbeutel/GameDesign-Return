@@ -24,7 +24,7 @@ public class Enemy : Damageable
             bool placeRight = Random.Range(0f, 1f) > 0.5;
             bool placeUp = Random.Range(0f, 1f) > 0.5;
             EnergyContainer newEnergyContainerInstance = Instantiate(energyContainer,
-                new Vector2(transform.position.x + (placeRight ? Random.Range(0.1f, 0.5f) : Random.Range(-0.5f, -0.1f)), transform.position.y + (placeRight ? Random.Range(0.1f, 0.5f) : Random.Range(-0.5f, -0.1f))),
+                new Vector2(transform.position.x + (placeRight ? Random.Range(0.1f, 0.5f) : Random.Range(-0.5f, -0.1f)), transform.position.y + (placeUp ? Random.Range(0.1f, 0.5f) : Random.Range(-0.5f, -0.1f))),
                 Quaternion.identity);
             newEnergyContainerInstance.transform.parent = this.transform.parent;
         }

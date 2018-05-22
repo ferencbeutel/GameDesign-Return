@@ -3,6 +3,11 @@
     T left;
     R right;
 
+    public override string ToString()
+    {
+        return "Left: " + left.ToString() + " | Right: " + right.ToString();
+    }
+
     public Tuple(T left, R right)
     {
         this.left = left;

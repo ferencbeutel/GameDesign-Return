@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityStandardAssets._2D;
 
 public class Player2D : MonoBehaviour
 {

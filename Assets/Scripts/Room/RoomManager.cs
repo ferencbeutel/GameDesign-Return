@@ -70,13 +70,31 @@ public class RoomManager : MonoBehaviour
 
     void UpdateCamera(Transform destination)
     {
-        float minX = 100000;
-        float maxX = -100000;
-        float minY = 100000;
-        float maxY = -100000;
-        foreach (Transform childTransform in activeRoom.gameObject.transform)
+        Transform currentTransform = activeRoom.gameObject.transform;
+
+        Tuple<Tuple<float, float>, Tuple<float, float>> minMaxXYValues = DetermineMinMaxXYValues(activeRoom.gameObject.transform, 0, new Tuple<Tuple<float, float>, Tuple<float, float>>(new Tuple<float, float>(10000, -10000), new Tuple<float, float>(10000, -10000)));
+
+        Camera2DFollow cameraFollowComponent = mainCam.GetComponent<Camera2DFollow>();
+
+        Debug.Log("camera bounds: " + minMaxXYValues);
+
+        cameraFollowComponent.lowerBounds = new Vector2(minMaxXYValues.GetLeft().GetLeft(), minMaxXYValues.GetRight().GetLeft());
+        cameraFollowComponent.upperBounds = new Vector2(minMaxXYValues.GetLeft().GetRight(), minMaxXYValues.GetRight().GetRight());
+
+        mainCam.transform.position = new Vector3(destination.transform.position.x, destination.transform.position.y, mainCam.transform.position.z);
+    }
+
+    Tuple<Tuple<float, float>, Tuple<float, float>> DetermineMinMaxXYValues(Transform transform, int depth, Tuple<Tuple<float, float>, Tuple<float, float>> yield)
+    {
+        float newRendererMinX = yield.GetLeft().GetLeft();
+        float newRendererMaxX = yield.GetLeft().GetRight();
+        float newRendererMinY = yield.GetRight().GetLeft();
+        float newRendererMaxY = yield.GetRight().GetRight();
+
+        // best yield for this transforms children
+        foreach (Transform childTransform in transform)
         {
-            if (childTransform.gameObject.tag == "Background")
+            if (childTransform.gameObject.tag == "IgnoreForBounds")
             {
                 continue;
             }
@@ -84,36 +102,49 @@ public class RoomManager : MonoBehaviour
             Renderer renderer = childTransform.gameObject.GetComponent<Renderer>();
             if (renderer != null)
             {
-                float rendererMinX = renderer.bounds.min.x;
-                float rendererMinY = renderer.bounds.min.y;
-                float rendererMaxX = renderer.bounds.max.x;
-                float rendererMaxY = renderer.bounds.max.y;
-
-                if (rendererMinX < minX)
-                {
-                    minX = rendererMinX;
-                }
-                if (rendererMinY < minY)
-                {
-                    minY = rendererMinY;
-                }
-                if (rendererMaxX > maxX)
-                {
-                    maxX = rendererMaxX;
-                }
-                if (rendererMaxY > maxY)
-                {
-                    maxY = rendererMaxY;
-                }
+                newRendererMinX = Mathf.Min(renderer.bounds.min.x, newRendererMinX);
+                newRendererMaxX = Mathf.Max(renderer.bounds.max.x, newRendererMaxX);
+                newRendererMinY = Mathf.Min(renderer.bounds.min.y, newRendererMinY);
+                newRendererMaxY = Mathf.Max(renderer.bounds.max.y, newRendererMaxY);
             }
         }
 
-        Camera2DFollow cameraFollowComponent = mainCam.GetComponent<Camera2DFollow>();
 
-        cameraFollowComponent.lowerBounds = new Vector2(minX, minY);
-        cameraFollowComponent.upperBounds = new Vector2(maxX, maxY);
+        if (newRendererMaxX > 60)
+        {
+            Debug.Log(transform.gameObject.name);
+        }
 
-        mainCam.transform.position = new Vector3(destination.transform.position.x, destination.transform.position.y, mainCam.transform.position.z);
+        Tuple<Tuple<float, float>, Tuple<float, float>> newYield = new Tuple<Tuple<float, float>, Tuple<float, float>>(new Tuple<float, float>(newRendererMinX, newRendererMaxX), new Tuple<float, float>(newRendererMinY, newRendererMaxY));
+
+        // deep enough, just return the best yield for this tree
+        if (depth >= 3)
+        {
+            return newYield;
+        }
+
+        // we need to go deeper!
+        List<Tuple<Tuple<float, float>, Tuple<float, float>>> childYields = new List<Tuple<Tuple<float, float>, Tuple<float, float>>>();
+        foreach (Transform childTransform in transform)
+        {
+            if (childTransform.gameObject.tag == "IgnoreForBounds")
+            {
+                continue;
+            }
+
+            childYields.Add(DetermineMinMaxXYValues(childTransform, depth + 1, newYield));
+        }
+
+        // now, determine best yield of children
+        foreach (Tuple<Tuple<float, float>, Tuple<float, float>> childYield in childYields)
+        {
+            newRendererMinX = Mathf.Min(newRendererMinX, childYield.GetLeft().GetLeft());
+            newRendererMaxX = Mathf.Max(newRendererMaxX, childYield.GetLeft().GetRight());
+            newRendererMinY = Mathf.Min(newRendererMinY, childYield.GetRight().GetLeft());
+            newRendererMaxY = Mathf.Max(newRendererMaxY, childYield.GetRight().GetRight());
+        }
+
+        return new Tuple<Tuple<float, float>, Tuple<float, float>>(new Tuple<float, float>(newRendererMinX, newRendererMaxX), new Tuple<float, float>(newRendererMinY, newRendererMaxY));
     }
 
     void Update()
