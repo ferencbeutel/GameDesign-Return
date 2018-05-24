@@ -7,7 +7,7 @@ public class EnergySwitch : Interactable
     public override void OnInteraction()
     {
         Debug.Log("TODO: animate current in cable");
-        player.hasFinishedTutorial = true;
+        player.activatedEnergySwitch = true;
     }
 
     protected override void Start()

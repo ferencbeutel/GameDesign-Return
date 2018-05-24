@@ -11,6 +11,7 @@ TagManager:
   - UI
   - PlayerContainer
   - IgnoreForBounds
+  - town--boulder
   layers:
   - Default
   - TransparentFX

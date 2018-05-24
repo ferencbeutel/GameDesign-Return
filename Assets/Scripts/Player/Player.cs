@@ -12,7 +12,8 @@ public class Player : Damageable
     public RogersEnergyWeapon rogersEnergyWeapon;
     public RogersPlasmaWeapon rogersPlasmaWeapon;
 
-    public Boolean hasFinishedTutorial = false;
+    public Boolean readDiary = false;
+    public Boolean activatedEnergySwitch = false;
 
     List<String> collectedItems = new List<String>();
     GameObject rogers;
@@ -51,7 +52,9 @@ public class Player : Damageable
         saveData.maxHealth = damageable.getMaxHealth();
         saveData.collectedItems = this.collectedItems;
         saveData.spawnPoint = this.spawnPoint;
-        saveData.hasFinishedTutorial = this.hasFinishedTutorial;
+
+        saveData.readDiary = this.readDiary;
+        saveData.activatedEnergySwitch = this.activatedEnergySwitch;
 
         foreach (Weapon currentWeapon in weapon.weapons)
         {
@@ -78,9 +81,11 @@ public class Player : Damageable
             FileStream saveFile = File.Open(savefilePath, FileMode.Open);
             PlayerData saveData = (PlayerData)binaryFormatter.Deserialize(saveFile);
 
-            this.collectedItems = saveData.collectedItems;
-            this.hasFinishedTutorial = saveData.hasFinishedTutorial;
             this.spawnPoint = saveData.spawnPoint;
+            this.collectedItems = saveData.collectedItems;
+
+            this.readDiary = saveData.readDiary;
+            this.activatedEnergySwitch = saveData.activatedEnergySwitch;
 
             damageable.Load(saveData.currentHealth, saveData.maxHealth);
 
@@ -124,6 +129,7 @@ public class Player : Damageable
         public bool highJumpTechUpCollected;
         public SpawnPoint spawnPoint;
 
-        public bool hasFinishedTutorial;
+        public bool readDiary;
+        public bool activatedEnergySwitch;
     }
 }

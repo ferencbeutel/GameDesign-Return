@@ -3,6 +3,7 @@
 public class Level001 : MonoBehaviour
 {
     public EnergyBeamDoor doorToLab;
+    public GameObject boulder;
 
     Player player;
 
@@ -14,9 +15,13 @@ public class Level001 : MonoBehaviour
 
     private void Update()
     {
-        if (player.hasFinishedTutorial && !doorToLab.isActive)
+        if (player.activatedEnergySwitch && !doorToLab.isActive)
         {
             doorToLab.Activate();
+        }
+        if (player.readDiary && !boulder.activeSelf)
+        {
+            boulder.SetActive(true);
         }
     }
 }
