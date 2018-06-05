@@ -12,6 +12,7 @@ public class Player : Damageable
     public RogersEnergyWeapon rogersEnergyWeapon;
     public RogersPlasmaWeapon rogersPlasmaWeapon;
 
+    public Boolean seenTutorialText = false;
     public Boolean readDiary = false;
     public Boolean activatedEnergySwitch = false;
 
@@ -55,6 +56,7 @@ public class Player : Damageable
 
         saveData.readDiary = this.readDiary;
         saveData.activatedEnergySwitch = this.activatedEnergySwitch;
+        saveData.seenTutorialText = this.seenTutorialText;
 
         foreach (Weapon currentWeapon in weapon.weapons)
         {
@@ -86,6 +88,7 @@ public class Player : Damageable
 
             this.readDiary = saveData.readDiary;
             this.activatedEnergySwitch = saveData.activatedEnergySwitch;
+            this.seenTutorialText = saveData.seenTutorialText;
 
             damageable.Load(saveData.currentHealth, saveData.maxHealth);
 
@@ -131,5 +134,6 @@ public class Player : Damageable
 
         public bool readDiary;
         public bool activatedEnergySwitch;
+        public bool seenTutorialText;
     }
 }

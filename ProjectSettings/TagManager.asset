@@ -12,6 +12,9 @@ TagManager:
   - PlayerContainer
   - IgnoreForBounds
   - town--boulder
+  - narrator
+  - narrative
+  - dialogue
   layers:
   - Default
   - TransparentFX

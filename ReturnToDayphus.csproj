@@ -300,6 +300,9 @@
     <Compile Include="Assets\Scripts\Collectable\EnergyTechUp.cs" />
     <Compile Include="Assets\Scripts\Collectable\RogersPlasmaWeaponTechUp.cs" />
     <Compile Include="Assets\Scripts\Damageable\Damageable.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\DialogueManager.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\Message.cs" />
     <Compile Include="Assets\Scripts\Door\Door.cs" />
     <Compile Include="Assets\Scripts\Door\DoorTrigger.cs" />
     <Compile Include="Assets\Scripts\Door\EnergyBeamDoor.cs" />

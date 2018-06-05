@@ -7,7 +7,7 @@ public class Door<T> : MonoBehaviour
     public bool isActive = true;
 
     Transform playerTransform;
-    BoxCollider2D boxCollider;
+    PolygonCollider2D polyCollider;
     Animator doorAnimator;
 
     bool isOpen = false;
@@ -17,7 +17,7 @@ public class Door<T> : MonoBehaviour
     {
         isOpen = true;
         openTime = Time.time;
-        boxCollider.enabled = false;
+        polyCollider.enabled = false;
         doorAnimator.SetBool("isOpen", isOpen);
     }
 
@@ -37,14 +37,14 @@ public class Door<T> : MonoBehaviour
     {
         Debug.Log("closing door");
         isOpen = false;
-        boxCollider.enabled = true;
+        polyCollider.enabled = true;
         doorAnimator.SetBool("isOpen", isOpen);
     }
 
     private void Awake()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-        boxCollider = gameObject.GetComponent<BoxCollider2D>();
+        polyCollider = gameObject.GetComponent<PolygonCollider2D>();
         doorAnimator = gameObject.GetComponent<Animator>();
 
         doorAnimator.SetBool("isActive", isActive);
