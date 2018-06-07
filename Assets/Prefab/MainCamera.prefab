@@ -52,7 +52,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -97,7 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88d2c5134db9d946b15215138e6ee89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 4543908166205316, guid: d9962a2318715ba428edf46f8727cf6f, type: 2}
   damping: 0.5
   lookAheadFactor: 2
   lookAheadReturnSpeed: 1

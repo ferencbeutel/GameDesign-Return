@@ -313,6 +313,7 @@
     <Compile Include="Assets\Scripts\Level001\EnergySwitch.cs" />
     <Compile Include="Assets\Scripts\Level001\Level001.cs" />
     <Compile Include="Assets\Scripts\Level002\RogersHouseDiary.cs" />
+    <Compile Include="Assets\Scripts\MenuInitializer.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\Player2D.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
@@ -320,6 +321,7 @@
     <Compile Include="Assets\Scripts\Room\RoomManager.cs" />
     <Compile Include="Assets\Scripts\Room\SpawnPoint.cs" />
     <Compile Include="Assets\Scripts\Surface\DamagingSurface.cs" />
+    <Compile Include="Assets\Scripts\UI\MenuUI.cs" />
     <Compile Include="Assets\Scripts\UI\UIHealth.cs" />
     <Compile Include="Assets\Scripts\Util\Tuple.cs" />
     <Compile Include="Assets\Scripts\Weapon\EnergyBullet.cs" />

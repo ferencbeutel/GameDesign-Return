@@ -7,19 +7,16 @@ public class GameInitializer : MonoBehaviour
 
     public RoomManager roomManager;
     public Player player;
-    public Camera mainCamera;
     public Canvas UI;
 
-    // Use this for initialization
-    void Start()
+    public void InitGame(Camera mainCam)
     {
         Player newPlayer = Instantiate(player, new Vector2(0, 0), Quaternion.identity);
 
-        Camera newCam = Instantiate(mainCamera, new Vector3(0, 0, -10), Quaternion.identity);
-        newCam.GetComponent<Camera2DFollow>().target = newPlayer.gameObject.transform;
+        mainCam.GetComponent<Camera2DFollow>().AttachTarget(newPlayer.gameObject.transform);
 
         Canvas newUI = Instantiate(UI, new Vector2(0, 0), Quaternion.identity);
-        newUI.worldCamera = newCam;
+        newUI.worldCamera = mainCam;
 
         Instantiate(roomManager, new Vector2(0, 0), Quaternion.identity);
 

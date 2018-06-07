@@ -15,6 +15,7 @@ TagManager:
   - narrator
   - narrative
   - dialogue
+  - gameInitializer
   layers:
   - Default
   - TransparentFX
