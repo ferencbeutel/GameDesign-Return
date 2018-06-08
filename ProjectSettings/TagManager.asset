@@ -16,6 +16,7 @@ TagManager:
   - narrative
   - dialogue
   - gameInitializer
+  - PauseMenu
   layers:
   - Default
   - TransparentFX

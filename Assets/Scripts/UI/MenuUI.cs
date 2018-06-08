@@ -17,13 +17,11 @@ public class MenuUI : MonoBehaviour
     public Button aboutBackButton;
 
     GameInitializer gameInitializer;
-    CanvasGroup thisCanvasGroup;
     Camera mainCam;
 
     private void Start()
     {
         gameInitializer = GameObject.FindGameObjectWithTag("gameInitializer").GetComponent<GameInitializer>();
-        thisCanvasGroup = GetComponent<CanvasGroup>();
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 
         startButton.onClick.AddListener(OnStartButtonClick);
@@ -39,8 +37,8 @@ public class MenuUI : MonoBehaviour
 
     private void OnStartButtonClick()
     {
-        thisCanvasGroup.alpha = 0f;
         gameInitializer.InitGame(mainCam);
+        Object.Destroy(gameObject);
     }
 
     private void OnOptionsButtonClick()

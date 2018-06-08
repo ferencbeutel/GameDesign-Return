@@ -4496,8 +4496,8 @@ MonoBehaviour:
     - narrator: Violet Rogers
       narrative: Hi Cloud, I can hear you loud and clear.\nAre my systems online?
     - narrator: Cloud Synapse
-      narrative: "Vitality Systems...\t\t\t\t\tactive!\\nCommunication Systems...\tactive!\\nExo-Movement
-        Systems...\tactive!\\nCombat Systems...\t\t\t\tactive!\\n\\nYes, it looks
+      narrative: "Vitality Systems...\t\t\t\t\tactive!\\nCommunication Systems...\t\tactive!\\nExo-Movement
+        Systems...\t\tactive!\\nCombat Systems...\t\t\t\t\tactive!\\n\\nYes, it looks
         like all Systems are online."
     - narrator: Cloud Synapse
       narrative: I've landed your ship to the right of your old village.\nHead over
