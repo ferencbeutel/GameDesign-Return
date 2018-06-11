@@ -12,9 +12,15 @@ public class Player : Damageable
     public RogersEnergyWeapon rogersEnergyWeapon;
     public RogersPlasmaWeapon rogersPlasmaWeapon;
 
-    public Boolean seenTutorialText = false;
+    // interactables
     public Boolean readDiary = false;
     public Boolean activatedEnergySwitch = false;
+
+    // dialogues
+    public Boolean seenTutorialText = false;
+    public Boolean seenTownDialogue = false;
+    public Boolean seenEnergySwitchDialogue = false;
+    public Boolean seenEntryDialogue = false;
 
     List<String> collectedItems = new List<String>();
     GameObject rogers;
@@ -54,9 +60,15 @@ public class Player : Damageable
         saveData.collectedItems = this.collectedItems;
         saveData.spawnPoint = this.spawnPoint;
 
+        // interactables
         saveData.readDiary = this.readDiary;
         saveData.activatedEnergySwitch = this.activatedEnergySwitch;
+
+        // dialogues
         saveData.seenTutorialText = this.seenTutorialText;
+        saveData.seenTownDialogue = this.seenTownDialogue;
+        saveData.seenEnergySwitchDialogue = this.seenEnergySwitchDialogue;
+        saveData.seenEntryDialogue = this.seenEntryDialogue;
 
         foreach (Weapon currentWeapon in weapon.weapons)
         {
@@ -86,9 +98,15 @@ public class Player : Damageable
             this.spawnPoint = saveData.spawnPoint;
             this.collectedItems = saveData.collectedItems;
 
+            // interactables
             this.readDiary = saveData.readDiary;
             this.activatedEnergySwitch = saveData.activatedEnergySwitch;
+
+            // dialogues
             this.seenTutorialText = saveData.seenTutorialText;
+            this.seenTownDialogue = saveData.seenTownDialogue;
+            this.seenEnergySwitchDialogue = saveData.seenEnergySwitchDialogue;
+            this.seenEntryDialogue = saveData.seenEntryDialogue;
 
             damageable.Load(saveData.currentHealth, saveData.maxHealth);
 
@@ -132,8 +150,14 @@ public class Player : Damageable
         public bool highJumpTechUpCollected;
         public SpawnPoint spawnPoint;
 
+        // interactables
         public bool readDiary;
         public bool activatedEnergySwitch;
+
+        // dialogues
         public bool seenTutorialText;
+        public bool seenTownDialogue;
+        public bool seenEnergySwitchDialogue;
+        public bool seenEntryDialogue;
     }
 }

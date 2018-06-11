@@ -341,6 +341,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1276222515491564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4814179558946538}
+  - component: {fileID: 61103910878475302}
+  - component: {fileID: 114419954883129562}
+  m_Layer: 0
+  m_Name: TownDialogueZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1279488420391942
 GameObject:
   m_ObjectHideFlags: 1
@@ -1577,7 +1594,7 @@ GameObject:
   - component: {fileID: 4545599988971562}
   - component: {fileID: 212754397277938274}
   - component: {fileID: 60388811591651560}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rogersHouseFacade_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1699,7 +1716,7 @@ Transform:
   m_LocalScale: {x: 0.06219244, y: 0.23744838, z: 1}
   m_Children: []
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4031226995991532
 Transform:
@@ -1712,7 +1729,7 @@ Transform:
   m_LocalScale: {x: 0.07293064, y: 0.23744838, z: 1}
   m_Children: []
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4038575023855150
 Transform:
@@ -1738,7 +1755,7 @@ Transform:
   m_LocalScale: {x: 0.080978915, y: 3.1207485, z: 1}
   m_Children: []
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 26
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4054438644821408
 Transform:
@@ -1751,7 +1768,7 @@ Transform:
   m_LocalScale: {x: 0.38569385, y: 0.9401673, z: 1}
   m_Children: []
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4054985629994000
 Transform:
@@ -1764,7 +1781,7 @@ Transform:
   m_LocalScale: {x: 0.07293059, y: 0.23744838, z: 1}
   m_Children: []
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4055636420602794
 Transform:
@@ -1803,7 +1820,7 @@ Transform:
   m_LocalScale: {x: 0.06219244, y: 0.23744836, z: 1}
   m_Children: []
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 27
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4059391986542868
 Transform:
@@ -1855,7 +1872,7 @@ Transform:
   m_LocalScale: {x: 0.06219244, y: 0.23744838, z: 1}
   m_Children: []
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4109693437566044
 Transform:
@@ -1885,6 +1902,7 @@ Transform:
   - {fileID: 4860701486870716}
   - {fileID: 4109693437566044}
   - {fileID: 4655597907358222}
+  - {fileID: 4814179558946538}
   - {fileID: 4786705104700066}
   - {fileID: 4621092654350268}
   - {fileID: 4031226995991532}
@@ -2002,7 +2020,7 @@ Transform:
   m_LocalScale: {x: 0.06219244, y: 0.23744838, z: 1}
   m_Children: []
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4207732171329570
 Transform:
@@ -2119,7 +2137,7 @@ Transform:
   m_LocalScale: {x: 0.06219244, y: 0.23744836, z: 1}
   m_Children: []
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4283301744671114
 Transform:
@@ -2217,7 +2235,7 @@ Transform:
   - {fileID: 4991626793095054}
   - {fileID: 4992830633475498}
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 28
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4342697534647614
 Transform:
@@ -2262,7 +2280,7 @@ Transform:
   - {fileID: 4545599988971562}
   - {fileID: 4012901957044730}
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 29
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4370106556286818
 Transform:
@@ -2314,7 +2332,7 @@ Transform:
   m_LocalScale: {x: 0.05988783, y: 0.23621763, z: 1}
   m_Children: []
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4456920461826374
 Transform:
@@ -2340,7 +2358,7 @@ Transform:
   m_LocalScale: {x: 0.08097891, y: 3.1207473, z: 1}
   m_Children: []
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4464158775024416
 Transform:
@@ -2366,7 +2384,7 @@ Transform:
   m_LocalScale: {x: 0.035981435, y: 0.25731805, z: 1}
   m_Children: []
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4497520235998126
 Transform:
@@ -2392,7 +2410,7 @@ Transform:
   m_LocalScale: {x: 0.3856938, y: 0.952183, z: 1}
   m_Children: []
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4541202855143046
 Transform:
@@ -2414,8 +2432,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1958572388317734}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.45986, y: 2.968, z: 0}
-  m_LocalScale: {x: 0.06219244, y: 0.23744836, z: 1}
+  m_LocalPosition: {x: -11.4957, y: 2.968, z: 0}
+  m_LocalScale: {x: 0.046284128, y: 0.23744836, z: 1}
   m_Children: []
   m_Father: {fileID: 4369770033943718}
   m_RootOrder: 17
@@ -2457,7 +2475,7 @@ Transform:
   m_LocalScale: {x: 0.080978915, y: 3.1207485, z: 1}
   m_Children: []
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4615637116947794
 Transform:
@@ -2496,7 +2514,7 @@ Transform:
   m_LocalScale: {x: 0.06217861, y: 0.23636477, z: 1}
   m_Children: []
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4632924514321782
 Transform:
@@ -2535,7 +2553,7 @@ Transform:
   m_LocalScale: {x: 0.06223578, y: 0.23744838, z: 1}
   m_Children: []
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4655597907358222
 Transform:
@@ -2574,7 +2592,7 @@ Transform:
   m_LocalScale: {x: 0.06449741, y: 0.23744838, z: 1}
   m_Children: []
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4687420547535704
 Transform:
@@ -2600,7 +2618,7 @@ Transform:
   m_LocalScale: {x: 0.01822455, y: 0.063575186, z: 1}
   m_Children: []
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4723258389698406
 Transform:
@@ -2626,7 +2644,7 @@ Transform:
   m_LocalScale: {x: 0.035981577, y: 0.28904054, z: 1}
   m_Children: []
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4734400234468548
 Transform:
@@ -2704,7 +2722,7 @@ Transform:
   m_LocalScale: {x: 0.06219244, y: 0.23744838, z: 1}
   m_Children: []
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4790281037418580
 Transform:
@@ -2717,7 +2735,20 @@ Transform:
   m_LocalScale: {x: 0.06219244, y: 0.23744838, z: 1}
   m_Children: []
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 8
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4814179558946538
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1276222515491564}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.779, y: 1.11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4130836168423522}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4818396422020738
 Transform:
@@ -2821,7 +2852,7 @@ Transform:
   m_LocalScale: {x: 0.3856938, y: 0.94016826, z: 1}
   m_Children: []
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4902935101385956
 Transform:
@@ -2847,7 +2878,7 @@ Transform:
   m_LocalScale: {x: 0.035981577, y: 0.25731805, z: 1}
   m_Children: []
   m_Father: {fileID: 4130836168423522}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4928040340016468
 Transform:
@@ -3346,6 +3377,31 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 2, y: 0.7593969}
+  m_EdgeRadius: 0
+--- !u!61 &61103910878475302
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1276222515491564}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.42846057, y: 1.0648124}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.14307886, y: 3.1296248}
   m_EdgeRadius: 0
 --- !u!61 &61212495128461472
 BoxCollider2D:
@@ -4355,6 +4411,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3300aa63ce4ad174594aea5d01ba10cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  energySwitchActivationDialogue:
+    messages:
+    - narrator: Cloud Synapse
+      narrative: Rogers, you restored the energy of the Shinbun Research Lab!\nYou
+        should head over immediately and look for survivors.
+    - narrator: Violet Rogers
+      narrative: Alright CS - the entry was to the right of the town, right?
+--- !u!114 &114419954883129562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1276222515491564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34ade3409a3f482448e127c1fe2d51a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  townDialogue:
+    messages:
+    - narrator: Cloud Synapse
+      narrative: Oh no... Rogers, this is bad.
+    - narrator: Violet Rogers
+      narrative: CS, what happened here?! Where are all the people?
+    - narrator: Cloud Synapse
+      narrative: I am not sure.. but this place looks desolate!\nFurthermore, my sensors
+        can only find small biosignatures, so there are most likely no humans here
+        at all.
+    - narrator: Violet Rogers
+      narrative: We failed.. if only we returned faster...
+    - narrator: Cloud Synapse
+      narrative: Rogers, you should investigate this place. Maybe you can find more
+        pieces of information about what happened in some of these houses?
+    - narrator: Violet Rogers
+      narrative: CS, you are right. I should visit my parents house anyways to verify
+        whether they are there or not..
 --- !u!114 &114427155985026568
 MonoBehaviour:
   m_ObjectHideFlags: 1

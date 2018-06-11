@@ -294,6 +294,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AI\CarefulWalk.cs" />
     <Compile Include="Assets\Scripts\Camera\Camera2DFollow.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraEffects.cs" />
     <Compile Include="Assets\Scripts\Camera\Parallax.cs" />
     <Compile Include="Assets\Scripts\Collectable\Collectable.cs" />
     <Compile Include="Assets\Scripts\Collectable\EnergyContainer.cs" />
@@ -312,6 +313,8 @@
     <Compile Include="Assets\Scripts\Interactable\Interactable.cs" />
     <Compile Include="Assets\Scripts\Level001\EnergySwitch.cs" />
     <Compile Include="Assets\Scripts\Level001\Level001.cs" />
+    <Compile Include="Assets\Scripts\Level001\TownDialogueZone.cs" />
+    <Compile Include="Assets\Scripts\Level002\EntryDialogue.cs" />
     <Compile Include="Assets\Scripts\Level002\RogersHouseDiary.cs" />
     <Compile Include="Assets\Scripts\MenuInitializer.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />

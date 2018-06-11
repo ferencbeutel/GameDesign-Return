@@ -38,6 +38,20 @@ public class DialogueManager : MonoBehaviour
     {
         if (isDisplayingMessage)
         {
+            if (Application.isEditor && Input.GetKey(KeyCode.F))
+            {
+                StopAllCoroutines();
+                messageQueue.Clear();
+                narratorText.text = "";
+                narrativeText.text = "";
+                isDisplayingMessage = false;
+                isAnimatingText = false;
+                gameObject.GetComponent<CanvasGroup>().alpha = 0f;
+                Time.timeScale = 1.0f;
+
+                this.afterDialogueCallback();
+
+            }
             bool playerInput = Input.GetKey(KeyCode.E);
             if (isAnimatingText)
             {

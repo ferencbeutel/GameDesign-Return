@@ -3,7 +3,7 @@ SceneListBegin?
 Assets/gameScene.unity
 SceneListEnd?
 944ffa6f4b4cee588f29b4f685ed8372 Assembly-CSharp.dll:.Level001
-ae629e15a66da13c30074e7671dbf174 Assembly-CSharp.dll:.Player
+a7ced831bccd66434f49ef06c705b27a Assembly-CSharp.dll:.Player
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 dbc29a6f2739d277c10da432d73adb6d UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 8144169769d51429c4aedc8b0f92d47b UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -98,7 +98,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 df374c01140c2d578bf70cbd60073d1d UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.EnergySwitch
+771aa169fb9fe12a94d7587fdd1572e8 Assembly-CSharp.dll:.EnergySwitch
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -126,6 +126,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 78ebae5ed9b3edeb216da437b99754a4 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.Joystick
+f0d5038fcc68762136112f51a8d17de2 Assembly-CSharp.dll:.PauseMenu
 5845f717f96906afdaa5742d8f732e22 Assembly-CSharp.dll:.DamagingSurface
 a2efb0db652b8114d1ae7dd9a600d626 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.InputAxisScrollbar
 fe76270bd84ec3b6f2f6f92c69cf69da Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.AxisTouchButton
@@ -135,6 +136,7 @@ a7d3c6c6948d99dd4116e659ddcf5ac4 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 e4676c29540e3074606c929268d346f5 Assembly-CSharp.dll:.PlasmaBullet
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.MobileControlRig
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.RogersHouseDiary
+d9282206a5921f1850aee03d57989eab Assembly-CSharp.dll:.PauseMenuInitializer
 7dd27067d1e3f51ef270cb479a65e243 Assembly-CSharp.dll:.WeaponController
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
@@ -175,5 +177,5 @@ e4676c29540e3074606c929268d346f5 Assembly-CSharp.dll:.EnergyBullet
 5faac4b33c05f456620c0931289a3c2c Assembly-CSharp.dll:.UIHealth
 d5bb60720a8d4f73fb99b547edd36986 Assembly-CSharp.dll:.EnergyBeamDoorTrigger
 8cb664a9935a8c09f4c9444e2835cb0d Assembly-CSharp.dll:.SpawnPoint
-f0d5038fcc68762136112f51a8d17de2 Assembly-CSharp.dll:.PauseMenu
-d9282206a5921f1850aee03d57989eab Assembly-CSharp.dll:.PauseMenuInitializer
+77c7e480309a77c03e1cc571b4a7b727 Assembly-CSharp.dll:.TownDialogueZone
+c237719a36fea6289bc2d2e4f762845b Assembly-CSharp.dll:.EntryDialogue
