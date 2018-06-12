@@ -136,7 +136,8 @@ public class Player : Damageable
 
     public override void OnDeath()
     {
-        Debug.Log("OH NO! ROGERS DIED...");
+        GameOverInitializer gameOverInitializer = FindObjectOfType<GameOverInitializer>();
+        gameOverInitializer.InitGameOver();
     }
 
     [Serializable]

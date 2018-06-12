@@ -324,6 +324,7 @@
     <Compile Include="Assets\Scripts\Room\RoomManager.cs" />
     <Compile Include="Assets\Scripts\Room\SpawnPoint.cs" />
     <Compile Include="Assets\Scripts\Surface\DamagingSurface.cs" />
+    <Compile Include="Assets\Scripts\UI\GameOverInitializer.cs" />
     <Compile Include="Assets\Scripts\UI\MenuUI.cs" />
     <Compile Include="Assets\Scripts\UI\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\UI\PauseMenuInitializer.cs" />

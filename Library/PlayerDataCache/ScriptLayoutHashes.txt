@@ -2,6 +2,7 @@ WindowsStandalone
 SceneListBegin?
 Assets/gameScene.unity
 SceneListEnd?
+77c7e480309a77c03e1cc571b4a7b727 Assembly-CSharp.dll:.TownDialogueZone
 944ffa6f4b4cee588f29b4f685ed8372 Assembly-CSharp.dll:.Level001
 a7ced831bccd66434f49ef06c705b27a Assembly-CSharp.dll:.Player
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -135,7 +136,7 @@ a7d3c6c6948d99dd4116e659ddcf5ac4 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 e4676c29540e3074606c929268d346f5 Assembly-CSharp.dll:.PlasmaBullet
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.MobileControlRig
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.RogersHouseDiary
+87ead1f7b8f1af2b87094458cb467ce0 Assembly-CSharp.dll:.RogersHouseDiary
 d9282206a5921f1850aee03d57989eab Assembly-CSharp.dll:.PauseMenuInitializer
 7dd27067d1e3f51ef270cb479a65e243 Assembly-CSharp.dll:.WeaponController
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
@@ -167,15 +168,16 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 47dc1bea2bbc4503384780f03b4e532f Assembly-CSharp.dll:.EnergyBeamDoor
 502481526c4c6fb6fd04d31f53009c08 Assembly-CSharp.dll:.CarefulWalk
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CameraEffects
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 c2755a4be39179531d235cbf826b6434 Assembly-CSharp.dll:.MenuInitializer
 4d64d2999bbdd857d38de6c891de480a Assembly-CSharp.dll:.Parallax
 a8796ecdc9d5c260bbe32f30c4b10708 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.TouchPad
+c237719a36fea6289bc2d2e4f762845b Assembly-CSharp.dll:.EntryDialogue
 6dbee387a383f7296d916f7eb0c9b61a Assembly-CSharp.dll:.RogersPlasmaWeaponTechUp
 a664eab0ee44566976c547cbecc5c7e0 Assembly-CSharp.dll:.EnergyContainer
 e4676c29540e3074606c929268d346f5 Assembly-CSharp.dll:.EnergyBullet
 5faac4b33c05f456620c0931289a3c2c Assembly-CSharp.dll:.UIHealth
 d5bb60720a8d4f73fb99b547edd36986 Assembly-CSharp.dll:.EnergyBeamDoorTrigger
 8cb664a9935a8c09f4c9444e2835cb0d Assembly-CSharp.dll:.SpawnPoint
-77c7e480309a77c03e1cc571b4a7b727 Assembly-CSharp.dll:.TownDialogueZone
-c237719a36fea6289bc2d2e4f762845b Assembly-CSharp.dll:.EntryDialogue
+b8642b265629a595a23d6ec0f0b3c330 Assembly-CSharp.dll:.GameOverInitializer

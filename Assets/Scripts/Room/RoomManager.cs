@@ -23,6 +23,12 @@ public class RoomManager : MonoBehaviour
         StartCoroutine(LoadRoomIntern(destination));
     }
 
+    public void ClearAll()
+    {
+        activeRoom.shouldDespawn = true;
+        loadedRooms.Clear();
+    }
+
     IEnumerator LoadRoomFromSpawnPointIntern(SpawnPoint spawnPoint)
     {
         Debug.Log("loading new room from spawnPoint");
