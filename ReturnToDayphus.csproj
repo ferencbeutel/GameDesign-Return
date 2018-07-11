@@ -286,59 +286,64 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="ReturnToDayphus.Plugins.csproj">
-      <Project>{24A4ACF3-2814-939F-812C-99F1B51AB07B}</Project>
-      <Name>ReturnToDayphus.Plugins</Name>
-    </ProjectReference>
+    <Compile Include="Assets\Resources\Scripts\AI\CarefulWalk.cs" />
+    <Compile Include="Assets\Resources\Scripts\Camera\Camera2DFollow.cs" />
+    <Compile Include="Assets\Resources\Scripts\Camera\CameraEffects.cs" />
+    <Compile Include="Assets\Resources\Scripts\Camera\Parallax.cs" />
+    <Compile Include="Assets\Resources\Scripts\Collectable\Collectable.cs" />
+    <Compile Include="Assets\Resources\Scripts\Collectable\EnergyContainer.cs" />
+    <Compile Include="Assets\Resources\Scripts\Collectable\EnergyTechUp.cs" />
+    <Compile Include="Assets\Resources\Scripts\Collectable\RogersPlasmaWeaponTechUp.cs" />
+    <Compile Include="Assets\Resources\Scripts\Damageable\Damageable.cs" />
+    <Compile Include="Assets\Resources\Scripts\Dialogue\Dialogue.cs" />
+    <Compile Include="Assets\Resources\Scripts\Dialogue\DialogueManager.cs" />
+    <Compile Include="Assets\Resources\Scripts\Dialogue\Message.cs" />
+    <Compile Include="Assets\Resources\Scripts\Door\Door.cs" />
+    <Compile Include="Assets\Resources\Scripts\Door\DoorTrigger.cs" />
+    <Compile Include="Assets\Resources\Scripts\Door\EnergyBeamDoor.cs" />
+    <Compile Include="Assets\Resources\Scripts\Door\EnergyBeamDoorTrigger.cs" />
+    <Compile Include="Assets\Resources\Scripts\Enemy\Enemy.cs" />
+    <Compile Include="Assets\Resources\Scripts\GameInitializer.cs" />
+    <Compile Include="Assets\Resources\Scripts\Interactable\Interactable.cs" />
+    <Compile Include="Assets\Resources\Scripts\Level001\EnergySwitch.cs" />
+    <Compile Include="Assets\Resources\Scripts\Level001\Level001.cs" />
+    <Compile Include="Assets\Resources\Scripts\Level001\TownDialogueZone.cs" />
+    <Compile Include="Assets\Resources\Scripts\Level002\EntryDialogue.cs" />
+    <Compile Include="Assets\Resources\Scripts\Level002\RogersHouseDiary.cs" />
+    <Compile Include="Assets\Resources\Scripts\MenuInitializer.cs" />
+    <Compile Include="Assets\Resources\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Resources\Scripts\Player\Player2D.cs" />
+    <Compile Include="Assets\Resources\Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\Resources\Scripts\Room\Room.cs" />
+    <Compile Include="Assets\Resources\Scripts\Room\RoomManager.cs" />
+    <Compile Include="Assets\Resources\Scripts\Room\SpawnPoint.cs" />
+    <Compile Include="Assets\Resources\Scripts\Surface\DamagingSurface.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\GameOverInitializer.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\MenuUI.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\PauseMenu.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\PauseMenuInitializer.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\UIHealth.cs" />
+    <Compile Include="Assets\Resources\Scripts\Util\Tuple.cs" />
+    <Compile Include="Assets\Resources\Scripts\Weapon\EnergyBullet.cs" />
+    <Compile Include="Assets\Resources\Scripts\Weapon\PlasmaBullet.cs" />
+    <Compile Include="Assets\Resources\Scripts\Weapon\RogersEnergyWeapon.cs" />
+    <Compile Include="Assets\Resources\Scripts\Weapon\RogersPlasmaWeapon.cs" />
+    <Compile Include="Assets\Resources\Scripts\Weapon\Weapon.cs" />
+    <Compile Include="Assets\Resources\Scripts\Weapon\WeaponController.cs" />
+    <Compile Include="Assets\Resources\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
+    <Compile Include="Assets\Resources\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
+    <Compile Include="Assets\Resources\Standard Assets\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
+    <Compile Include="Assets\Resources\Standard Assets\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
+    <Compile Include="Assets\Resources\Standard Assets\CrossPlatformInput\Scripts\Joystick.cs" />
+    <Compile Include="Assets\Resources\Standard Assets\CrossPlatformInput\Scripts\MobileControlRig.cs" />
+    <Compile Include="Assets\Resources\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
+    <Compile Include="Assets\Resources\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
+    <Compile Include="Assets\Resources\Standard Assets\CrossPlatformInput\Scripts\TiltInput.cs" />
+    <Compile Include="Assets\Resources\Standard Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
+    <Compile Include="Assets\Resources\Standard Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\AI\CarefulWalk.cs" />
-    <Compile Include="Assets\Scripts\Camera\Camera2DFollow.cs" />
-    <Compile Include="Assets\Scripts\Camera\CameraEffects.cs" />
-    <Compile Include="Assets\Scripts\Camera\Parallax.cs" />
-    <Compile Include="Assets\Scripts\Collectable\Collectable.cs" />
-    <Compile Include="Assets\Scripts\Collectable\EnergyContainer.cs" />
-    <Compile Include="Assets\Scripts\Collectable\EnergyTechUp.cs" />
-    <Compile Include="Assets\Scripts\Collectable\RogersPlasmaWeaponTechUp.cs" />
-    <Compile Include="Assets\Scripts\Damageable\Damageable.cs" />
-    <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
-    <Compile Include="Assets\Scripts\Dialogue\DialogueManager.cs" />
-    <Compile Include="Assets\Scripts\Dialogue\Message.cs" />
-    <Compile Include="Assets\Scripts\Door\Door.cs" />
-    <Compile Include="Assets\Scripts\Door\DoorTrigger.cs" />
-    <Compile Include="Assets\Scripts\Door\EnergyBeamDoor.cs" />
-    <Compile Include="Assets\Scripts\Door\EnergyBeamDoorTrigger.cs" />
-    <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
-    <Compile Include="Assets\Scripts\GameInitializer.cs" />
-    <Compile Include="Assets\Scripts\Interactable\Interactable.cs" />
-    <Compile Include="Assets\Scripts\Level001\EnergySwitch.cs" />
-    <Compile Include="Assets\Scripts\Level001\Level001.cs" />
-    <Compile Include="Assets\Scripts\Level001\TownDialogueZone.cs" />
-    <Compile Include="Assets\Scripts\Level002\EntryDialogue.cs" />
-    <Compile Include="Assets\Scripts\Level002\RogersHouseDiary.cs" />
-    <Compile Include="Assets\Scripts\MenuInitializer.cs" />
-    <Compile Include="Assets\Scripts\Player\Player.cs" />
-    <Compile Include="Assets\Scripts\Player\Player2D.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\Room\Room.cs" />
-    <Compile Include="Assets\Scripts\Room\RoomManager.cs" />
-    <Compile Include="Assets\Scripts\Room\SpawnPoint.cs" />
-    <Compile Include="Assets\Scripts\Surface\DamagingSurface.cs" />
-    <Compile Include="Assets\Scripts\UI\GameOverInitializer.cs" />
-    <Compile Include="Assets\Scripts\UI\MenuUI.cs" />
-    <Compile Include="Assets\Scripts\UI\PauseMenu.cs" />
-    <Compile Include="Assets\Scripts\UI\PauseMenuInitializer.cs" />
-    <Compile Include="Assets\Scripts\UI\UIHealth.cs" />
-    <Compile Include="Assets\Scripts\Util\Tuple.cs" />
-    <Compile Include="Assets\Scripts\Weapon\EnergyBullet.cs" />
-    <Compile Include="Assets\Scripts\Weapon\PlasmaBullet.cs" />
-    <Compile Include="Assets\Scripts\Weapon\RogersEnergyWeapon.cs" />
-    <Compile Include="Assets\Scripts\Weapon\RogersPlasmaWeapon.cs" />
-    <Compile Include="Assets\Scripts\Weapon\Weapon.cs" />
-    <Compile Include="Assets\Scripts\Weapon\WeaponController.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+    <None Include="Assets\Resources\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
