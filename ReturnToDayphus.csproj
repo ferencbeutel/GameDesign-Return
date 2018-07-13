@@ -286,6 +286,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Resources\Scripts\Activateable\Activateable.cs" />
     <Compile Include="Assets\Resources\Scripts\AI\CarefulWalk.cs" />
     <Compile Include="Assets\Resources\Scripts\Camera\Camera2DFollow.cs" />
     <Compile Include="Assets\Resources\Scripts\Camera\CameraEffects.cs" />
@@ -304,12 +305,14 @@
     <Compile Include="Assets\Resources\Scripts\Door\EnergyBeamDoorTrigger.cs" />
     <Compile Include="Assets\Resources\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Resources\Scripts\GameInitializer.cs" />
+    <Compile Include="Assets\Resources\Scripts\HighJumpPlatform.cs" />
+    <Compile Include="Assets\Resources\Scripts\Interactable\EnergySwitch.cs" />
     <Compile Include="Assets\Resources\Scripts\Interactable\Interactable.cs" />
-    <Compile Include="Assets\Resources\Scripts\Level001\EnergySwitch.cs" />
     <Compile Include="Assets\Resources\Scripts\Level001\Level001.cs" />
     <Compile Include="Assets\Resources\Scripts\Level001\TownDialogueZone.cs" />
-    <Compile Include="Assets\Resources\Scripts\Level002\EntryDialogue.cs" />
+    <Compile Include="Assets\Resources\Scripts\Level002\Level002.cs" />
     <Compile Include="Assets\Resources\Scripts\Level002\RogersHouseDiary.cs" />
+    <Compile Include="Assets\Resources\Scripts\Level003\Level003.cs" />
     <Compile Include="Assets\Resources\Scripts\MenuInitializer.cs" />
     <Compile Include="Assets\Resources\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Resources\Scripts\Player\Player2D.cs" />

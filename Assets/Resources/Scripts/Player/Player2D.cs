@@ -8,9 +8,9 @@ public class Player2D : MonoBehaviour
 
     public bool m_FacingRight = true;  // For determining which way the player is currently facing.
     public bool m_FacingUp = false;  // For determining which way the player is currently facing.
+    [SerializeField] public float m_JumpForce = 400f;  // Amount of force added when the player jumps.
 
     [SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
-    [SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
     [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
     [SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
     [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character

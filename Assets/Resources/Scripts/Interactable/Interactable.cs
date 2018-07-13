@@ -8,6 +8,7 @@ public abstract class Interactable : MonoBehaviour
 
     bool inInteraction = false;
     Text hintText;
+    Interactable interactableToUse;
 
     protected virtual void Start()
     {
@@ -19,6 +20,7 @@ public abstract class Interactable : MonoBehaviour
         if (collision.gameObject == GameObject.FindGameObjectWithTag("Player"))
         {
             hintText.enabled = true;
+            interactableToUse = gameObject.GetComponent<Interactable>();
         }
     }
 
@@ -27,17 +29,18 @@ public abstract class Interactable : MonoBehaviour
         if (collision.gameObject == GameObject.FindGameObjectWithTag("Player"))
         {
             hintText.enabled = false;
+            interactableToUse = null;
         }
     }
 
     protected virtual void FixedUpdate()
     {
         bool isInteracting = Input.GetKey(KeyCode.E);
-        if (!inInteraction && isInteracting && hintText.enabled)
+        if (!inInteraction && isInteracting && interactableToUse != null)
         {
             {
                 inInteraction = true;
-                OnInteraction();
+                interactableToUse.OnInteraction();
                 inInteraction = false;
             }
         }

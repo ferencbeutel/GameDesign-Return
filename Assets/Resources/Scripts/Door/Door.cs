@@ -2,13 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door<T> : MonoBehaviour
+public class Door<T> : Activateable
 {
-    public bool isActive = true;
-
     Transform playerTransform;
     PolygonCollider2D polyCollider;
-    Animator doorAnimator;
 
     bool isOpen = false;
     float openTime = 0;
@@ -18,19 +15,7 @@ public class Door<T> : MonoBehaviour
         isOpen = true;
         openTime = Time.time;
         polyCollider.enabled = false;
-        doorAnimator.SetBool("isOpen", isOpen);
-    }
-
-    public void Activate()
-    {
-        isActive = true;
-        doorAnimator.SetBool("isActive", isActive);
-    }
-
-    public void Deactivate()
-    {
-        isActive = false;
-        doorAnimator.SetBool("isActive", isActive);
+        animator.SetBool("isOpen", isOpen);
     }
 
     public void Close()
@@ -38,16 +23,16 @@ public class Door<T> : MonoBehaviour
         Debug.Log("closing door");
         isOpen = false;
         polyCollider.enabled = true;
-        doorAnimator.SetBool("isOpen", isOpen);
+        animator.SetBool("isOpen", isOpen);
     }
 
-    private void Awake()
+    protected override void Awake()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         polyCollider = gameObject.GetComponent<PolygonCollider2D>();
-        doorAnimator = gameObject.GetComponent<Animator>();
+        animator = gameObject.GetComponent<Animator>();
 
-        doorAnimator.SetBool("isActive", isActive);
+        base.Awake();
     }
 
     private void Update()

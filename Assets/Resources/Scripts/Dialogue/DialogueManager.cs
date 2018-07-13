@@ -20,6 +20,12 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayDialogue(Dialogue dialogue, System.Action afterDialogueCallback)
     {
+        if (dialogue.messages.Count == 0)
+        {
+            this.afterDialogueCallback();
+            return;
+        }
+
         this.afterDialogueCallback = afterDialogueCallback;
         gameObject.GetComponent<CanvasGroup>().alpha = 1f;
         Time.timeScale = 0f;

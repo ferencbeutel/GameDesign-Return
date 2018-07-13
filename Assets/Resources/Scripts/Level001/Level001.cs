@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class Level001 : MonoBehaviour
+public class Level001 : Room
 {
     public EnergyBeamDoor doorToLab;
     public GameObject boulder;
@@ -11,12 +11,12 @@ public class Level001 : MonoBehaviour
 
     void MarkDialogueAsFinished()
     {
-        player.seenTutorialText = true;
+        player.seenTutorialText_001 = true;
     }
 
     IEnumerator ShowTutorialDialogue()
     {
-        if (!player.seenTutorialText)
+        if (!player.seenTutorialText_001)
         {
             yield return new WaitForSeconds(2);
             DialogueManager dialogueManager = FindObjectOfType<DialogueManager>();
@@ -30,15 +30,17 @@ public class Level001 : MonoBehaviour
         StartCoroutine(ShowTutorialDialogue());
     }
 
-    private void Update()
+    protected override void Update()
     {
-        if (player.activatedEnergySwitch && !doorToLab.isActive)
+        if (player.activatedEnergySwitch_001 && !doorToLab.isActive)
         {
             doorToLab.Activate();
         }
-        if (player.readDiary && !boulder.activeSelf)
+        if (player.readDiary_002 && !boulder.activeSelf)
         {
             boulder.SetActive(true);
         }
+
+        base.Update();
     }
 }

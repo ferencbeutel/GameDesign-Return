@@ -14,7 +14,7 @@ public class RogersHouseDiary : Interactable
 
     public override void OnInteraction()
     {
-        if (!player.readDiary)
+        if (!player.readDiary_002)
         {
             dialogueManager.DisplayDialogue(diaryDialogue, AfterDiaryDialogue);
         }
@@ -31,7 +31,7 @@ public class RogersHouseDiary : Interactable
 
     void AfterDiaryDialogue()
     {
-        player.readDiary = true;
+        player.readDiary_002 = true;
         StartCoroutine(InitBoulderLogic());
     }
 

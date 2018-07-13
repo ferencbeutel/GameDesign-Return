@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Room : MonoBehaviour
+public abstract class Room : MonoBehaviour
 {
     public bool shouldDespawn = false;
     public string uuid;
 
-    private void Update()
+    protected virtual void Update()
     {
         if (shouldDespawn)
         {

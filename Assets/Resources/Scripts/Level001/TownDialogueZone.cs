@@ -11,7 +11,7 @@ public class TownDialogueZone : MonoBehaviour
 
     void MarkDialogueAsFinished()
     {
-        player.seenTownDialogue = true;
+        player.seenTownDialogue_001 = true;
     }
 
     private void Start()
@@ -21,7 +21,7 @@ public class TownDialogueZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject == player.gameObject && !player.seenTownDialogue)
+        if (collision.gameObject == player.gameObject && !player.seenTownDialogue_001)
         {
             DialogueManager dialogueManager = FindObjectOfType<DialogueManager>();
             dialogueManager.DisplayDialogue(townDialogue, MarkDialogueAsFinished);

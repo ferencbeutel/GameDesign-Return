@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnergyTechUp : Collectable
 {
+    public Dialogue tutorialDialogue;
+
     public override void OnCollection()
     {
         GameObject rogers = GameObject.FindGameObjectWithTag("Player");
@@ -19,5 +21,12 @@ public class EnergyTechUp : Collectable
             return;
         }
         rogersDamageComponent.IncreaseMax(100);
+
+        Player rogersPlayer = rogers.GetComponent<Player>();
+        if (!rogersPlayer.seenEnergyTechupTutorial)
+        {
+            DialogueManager dialogueManager = FindObjectOfType<DialogueManager>();
+            dialogueManager.DisplayDialogue(tutorialDialogue, () => { rogersPlayer.seenEnergyTechupTutorial = true; });
+        }
     }
 }

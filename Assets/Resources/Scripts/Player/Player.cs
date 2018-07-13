@@ -16,14 +16,22 @@ public class Player : Damageable
     public RogersPlasmaWeapon rogersPlasmaWeapon;
 
     // interactables
-    public Boolean readDiary = false;
-    public Boolean activatedEnergySwitch = false;
+    // level 001
+    public Boolean activatedEnergySwitch_001 = false;
+    // level 002
+    public Boolean readDiary_002 = false;
+    // level 003
+    public Boolean activatedEnergySwitch_003 = false;
 
     // dialogues
-    public Boolean seenTutorialText = false;
-    public Boolean seenTownDialogue = false;
-    public Boolean seenEnergySwitchDialogue = false;
-    public Boolean seenEntryDialogue = false;
+    public Boolean seenEnergyTechupTutorial = false;
+    // level 001
+    public Boolean seenTutorialText_001 = false;
+    public Boolean seenTownDialogue_001 = false;
+    public Boolean seenEnergySwitchDialogue_001 = false;
+    // level 003
+    public Boolean seenHighJumpTutorial_003 = false;
+    public Boolean seenEnergySwitchDialogue_003 = false;
 
     List<String> collectedItems = new List<String>();
     GameObject rogers;
@@ -65,14 +73,17 @@ public class Player : Damageable
         saveData.roomToSpawnUUID = this.spawnPoint.room.uuid;
 
         // interactables
-        saveData.readDiary = this.readDiary;
-        saveData.activatedEnergySwitch = this.activatedEnergySwitch;
+        saveData.activatedEnergySwitch_001 = this.activatedEnergySwitch_001;
+        saveData.readDiary_002 = this.readDiary_002;
+        saveData.activatedEnergySwitch_003 = this.activatedEnergySwitch_003;
 
         // dialogues
-        saveData.seenTutorialText = this.seenTutorialText;
-        saveData.seenTownDialogue = this.seenTownDialogue;
-        saveData.seenEnergySwitchDialogue = this.seenEnergySwitchDialogue;
-        saveData.seenEntryDialogue = this.seenEntryDialogue;
+        saveData.seenEnergyTechupTutorial = this.seenEnergyTechupTutorial;
+        saveData.seenTutorialText_001 = this.seenTutorialText_001;
+        saveData.seenTownDialogue_001 = this.seenTownDialogue_001;
+        saveData.seenEnergySwitchDialogue_001 = this.seenEnergySwitchDialogue_001;
+        saveData.seenHighJumpTutorial_003 = this.seenHighJumpTutorial_003;
+        saveData.seenEnergySwitchDialogue_003 = this.seenEnergySwitchDialogue_003;
 
         foreach (Weapon currentWeapon in weapon.weapons)
         {
@@ -114,14 +125,17 @@ public class Player : Damageable
             this.collectedItems = saveData.collectedItems;
 
             // interactables
-            this.readDiary = saveData.readDiary;
-            this.activatedEnergySwitch = saveData.activatedEnergySwitch;
+            this.activatedEnergySwitch_001 = saveData.activatedEnergySwitch_001;
+            this.readDiary_002 = saveData.readDiary_002;
+            this.activatedEnergySwitch_003 = saveData.activatedEnergySwitch_003;
 
             // dialogues
-            this.seenTutorialText = saveData.seenTutorialText;
-            this.seenTownDialogue = saveData.seenTownDialogue;
-            this.seenEnergySwitchDialogue = saveData.seenEnergySwitchDialogue;
-            this.seenEntryDialogue = saveData.seenEntryDialogue;
+            this.seenEnergyTechupTutorial = saveData.seenEnergyTechupTutorial;
+            this.seenTutorialText_001 = saveData.seenTutorialText_001;
+            this.seenTownDialogue_001 = saveData.seenTownDialogue_001;
+            this.seenEnergySwitchDialogue_001 = saveData.seenEnergySwitchDialogue_001;
+            this.seenHighJumpTutorial_003 = saveData.seenHighJumpTutorial_003;
+            this.seenEnergySwitchDialogue_003 = saveData.seenEnergySwitchDialogue_003;
 
             damageable.Load(saveData.currentHealth, saveData.maxHealth);
 
@@ -192,13 +206,21 @@ public class Player : Damageable
         public String roomToSpawnUUID;
 
         // interactables
-        public bool readDiary;
-        public bool activatedEnergySwitch;
+        // level 001
+        public bool activatedEnergySwitch_001;
+        // level 002
+        public bool readDiary_002;
+        // level 003
+        public bool activatedEnergySwitch_003;
 
         // dialogues
-        public bool seenTutorialText;
-        public bool seenTownDialogue;
-        public bool seenEnergySwitchDialogue;
-        public bool seenEntryDialogue;
+        public bool seenEnergyTechupTutorial;
+        // level 001
+        public bool seenTutorialText_001;
+        public bool seenTownDialogue_001;
+        public bool seenEnergySwitchDialogue_001;
+        // level 003
+        public bool seenHighJumpTutorial_003;
+        public bool seenEnergySwitchDialogue_003;
     }
 }
