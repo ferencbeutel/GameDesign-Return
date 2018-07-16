@@ -61,6 +61,7 @@ public class RoomManager : MonoBehaviour
         }
 
         player.transform.position = destination.gameObject.transform.position;
+        Debug.Log("new player position: " + destination.gameObject.transform.position);
         UpdateCamera(destination.gameObject.transform);
         blackOverlay.CrossFadeAlpha(0, .5f, false);
         yield return new WaitForSeconds(.5f);

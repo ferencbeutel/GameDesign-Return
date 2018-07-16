@@ -4361,7 +4361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   room: {fileID: 114868225379914818}
-  destination: {fileID: 114608059741512320, guid: 99476a34c046e7d40b449043a9728078,
+  destination: {fileID: 114944950971711260, guid: 679a459c3e1204d4d9e84fa09bee94c9,
     type: 2}
   isEntering: 0
   energyBeamDoor: {fileID: 114427155985026568}

@@ -9,6 +9,7 @@ public class SpawnPoint : Interactable
 
     public override void OnInteraction()
     {
+        player.spawnPoint = this;
         player.Save();
     }
 

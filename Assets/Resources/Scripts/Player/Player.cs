@@ -87,10 +87,6 @@ public class Player : Damageable
 
         foreach (Weapon currentWeapon in weapon.weapons)
         {
-            if (currentWeapon.GetType() == typeof(RogersEnergyWeapon))
-            {
-                saveData.energyBeamCollected = true;
-            }
             if (currentWeapon.GetType() == typeof(RogersPlasmaWeapon))
             {
                 saveData.plasmaBeamCollected = true;
@@ -139,21 +135,20 @@ public class Player : Damageable
 
             damageable.Load(saveData.currentHealth, saveData.maxHealth);
 
-            if (saveData.energyBeamCollected)
-            {
-                weapon.AddWeapon(Instantiate(rogersEnergyWeapon, new Vector2(0, 0), Quaternion.identity));
-            }
             if (saveData.plasmaBeamCollected)
             {
                 weapon.AddWeapon(Instantiate(rogersPlasmaWeapon, new Vector2(0, 0), Quaternion.identity));
             }
 
             StartCoroutine(DisplayLoadedMessage());
-        }
 
-        // first time the game is started
-        damageable.Load(damageable.maxHealth, damageable.maxHealth);
-        weapon.AddWeapon(Instantiate(rogersEnergyWeapon, new Vector2(0, 0), Quaternion.identity));
+            saveFile.Close();
+        }
+        else
+        {
+            // first time the game is started
+            damageable.Load(damageable.maxHealth, damageable.maxHealth);
+        }
     }
 
     public override void OnDeath()
@@ -200,7 +195,6 @@ public class Player : Damageable
         public float currentHealth;
         public float maxHealth;
         public List<String> collectedItems;
-        public bool energyBeamCollected;
         public bool plasmaBeamCollected;
         public bool highJumpTechUpCollected;
         public String roomToSpawnUUID;

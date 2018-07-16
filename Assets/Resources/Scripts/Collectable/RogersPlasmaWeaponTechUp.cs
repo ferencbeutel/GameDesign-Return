@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RogersPlasmaWeaponTechUp : Collectable
 {
-
+    public Dialogue tutorialDialogue;
     public RogersPlasmaWeapon rogersPlasmaWeapon;
 
     public override void OnCollection()
@@ -23,5 +23,8 @@ public class RogersPlasmaWeaponTechUp : Collectable
             return;
         }
         rogersWeapon.AddWeapon(Instantiate(rogersPlasmaWeapon, new Vector2(0, 0), Quaternion.identity));
+
+        DialogueManager dialogueManager = FindObjectOfType<DialogueManager>();
+        dialogueManager.DisplayDialogue(tutorialDialogue, () => { });
     }
 }

@@ -286,6 +286,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Level004.cs" />
+    <Compile Include="Assets\Level005.cs" />
     <Compile Include="Assets\Resources\Scripts\Activateable\Activateable.cs" />
     <Compile Include="Assets\Resources\Scripts\AI\CarefulWalk.cs" />
     <Compile Include="Assets\Resources\Scripts\Camera\Camera2DFollow.cs" />
