@@ -1677,6 +1677,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shouldDespawn: 0
   uuid: d9f22676-da26-414e-884f-aa71f39558b1
+  tune:
+    name: 
+    clip: {fileID: 0}
 --- !u!114 &114451318590201882
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1704,7 +1707,7 @@ MonoBehaviour:
     messages:
     - narrator: Game
       narrative: Thank you for playing the demo of Return to Dayphus!\nI hope you
-        had fun.
+        had fun.\nYour save file will be deleted now.
 --- !u!114 &114815320662145488
 MonoBehaviour:
   m_ObjectHideFlags: 1

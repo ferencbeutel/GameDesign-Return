@@ -17,9 +17,7 @@ public class GameOverTrigger : MonoBehaviour
             GameObject.FindObjectOfType<DialogueManager>().DisplayDialogue(gameOverDialogue, () =>
             {
                 player.DeleteSave();
-                menuInitializer.LoadMenu();
-                roomManager.ClearAll();
-                Destroy(player.gameObject, 0);
+                Application.Quit();
             });
         }
     }
