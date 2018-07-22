@@ -15,6 +15,9 @@ public class Player : Damageable
     public RogersEnergyWeapon rogersEnergyWeapon;
     public RogersPlasmaWeapon rogersPlasmaWeapon;
 
+    public AudioClip onDamage;
+    public AudioClip onDeath;
+
     // interactables
     // level 001
     public Boolean activatedEnergySwitch_001 = false;
@@ -22,6 +25,8 @@ public class Player : Damageable
     public Boolean readDiary_002 = false;
     // level 003
     public Boolean activatedEnergySwitch_003 = false;
+    // level 006
+    public Boolean encounteredBoss_006 = false;
 
     // dialogues
     public Boolean seenEnergyTechupTutorial = false;
@@ -32,6 +37,8 @@ public class Player : Damageable
     // level 003
     public Boolean seenHighJumpTutorial_003 = false;
     public Boolean seenEnergySwitchDialogue_003 = false;
+    //level 006
+    public Boolean seenLastWarning_006 = false;
 
     List<String> collectedItems = new List<String>();
     GameObject rogers;
@@ -39,6 +46,7 @@ public class Player : Damageable
     WeaponController weapon;
     String savefilePath;
     DialogueManager dialogueManager;
+    AudioSource audioSource;
 
     public void Spawn()
     {
@@ -61,6 +69,11 @@ public class Player : Damageable
         return collectedItems.Contains(uuid);
     }
 
+    public void DeleteSave()
+    {
+        File.Delete(savefilePath);
+    }
+
     public void Save()
     {
         BinaryFormatter binaryFormatter = new BinaryFormatter();
@@ -76,6 +89,7 @@ public class Player : Damageable
         saveData.activatedEnergySwitch_001 = this.activatedEnergySwitch_001;
         saveData.readDiary_002 = this.readDiary_002;
         saveData.activatedEnergySwitch_003 = this.activatedEnergySwitch_003;
+        saveData.encounteredBoss_006 = this.encounteredBoss_006;
 
         // dialogues
         saveData.seenEnergyTechupTutorial = this.seenEnergyTechupTutorial;
@@ -84,6 +98,7 @@ public class Player : Damageable
         saveData.seenEnergySwitchDialogue_001 = this.seenEnergySwitchDialogue_001;
         saveData.seenHighJumpTutorial_003 = this.seenHighJumpTutorial_003;
         saveData.seenEnergySwitchDialogue_003 = this.seenEnergySwitchDialogue_003;
+        saveData.seenLastWarning_006 = this.seenLastWarning_006;
 
         foreach (Weapon currentWeapon in weapon.weapons)
         {
@@ -124,6 +139,7 @@ public class Player : Damageable
             this.activatedEnergySwitch_001 = saveData.activatedEnergySwitch_001;
             this.readDiary_002 = saveData.readDiary_002;
             this.activatedEnergySwitch_003 = saveData.activatedEnergySwitch_003;
+            this.encounteredBoss_006 = saveData.encounteredBoss_006;
 
             // dialogues
             this.seenEnergyTechupTutorial = saveData.seenEnergyTechupTutorial;
@@ -132,6 +148,7 @@ public class Player : Damageable
             this.seenEnergySwitchDialogue_001 = saveData.seenEnergySwitchDialogue_001;
             this.seenHighJumpTutorial_003 = saveData.seenHighJumpTutorial_003;
             this.seenEnergySwitchDialogue_003 = saveData.seenEnergySwitchDialogue_003;
+            this.seenLastWarning_006 = saveData.seenLastWarning_006;
 
             damageable.Load(saveData.currentHealth, saveData.maxHealth);
 
@@ -187,6 +204,12 @@ public class Player : Damageable
         damageable = rogers.GetComponent<Damageable>();
         weapon = rogers.GetComponentInChildren<WeaponController>();
         dialogueManager = FindObjectOfType<DialogueManager>();
+        audioSource = gameObject.GetComponent<AudioSource>();
+    }
+
+    public override void OnDamageApplied()
+    {
+        audioSource.PlayOneShot(onDamage);
     }
 
     [Serializable]
@@ -206,6 +229,8 @@ public class Player : Damageable
         public bool readDiary_002;
         // level 003
         public bool activatedEnergySwitch_003;
+        // level 006
+        public bool encounteredBoss_006;
 
         // dialogues
         public bool seenEnergyTechupTutorial;
@@ -216,5 +241,7 @@ public class Player : Damageable
         // level 003
         public bool seenHighJumpTutorial_003;
         public bool seenEnergySwitchDialogue_003;
+        // level 006
+        public bool seenLastWarning_006;
     }
 }

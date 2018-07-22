@@ -7,14 +7,24 @@ public class Enemy : Damageable
 
     public float smallEnergyContainerDropChange;
     public float bigEnergyContainerDropChange;
+    public AudioClip onImpact;
+    public AudioClip onDeath;
 
     public EnergyContainer smallEnergyContainer;
     public EnergyContainer bigEnergyContainer;
+
+    AudioSource audioSource;
+
+    public override void OnDamageApplied()
+    {
+        audioSource.PlayOneShot(onImpact);
+    }
 
     public override void OnDeath()
     {
         this.TryToSpawnEnergyContainer(smallEnergyContainerDropChange, smallEnergyContainer);
         this.TryToSpawnEnergyContainer(bigEnergyContainerDropChange, bigEnergyContainer);
+        audioSource.PlayOneShot(onDeath);
     }
 
     void TryToSpawnEnergyContainer(float dropChange, EnergyContainer energyContainer)
@@ -28,5 +38,11 @@ public class Enemy : Damageable
                 Quaternion.identity);
             newEnergyContainerInstance.transform.parent = this.transform.parent;
         }
+    }
+
+    protected override void Start()
+    {
+        audioSource = gameObject.GetComponent<AudioSource>();
+        base.Start();
     }
 }

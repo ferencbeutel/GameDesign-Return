@@ -2070,6 +2070,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shouldDespawn: 0
   uuid: 8afd8026-a085-4b06-8d44-82a12f882520
+  tune:
+    name: houseTune
+    clip: {fileID: 8300000, guid: aa3979bda6ddb174ba128dbcac3ed5a4, type: 3}
 --- !u!114 &114782671534988178
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -24,8 +24,9 @@ public class Level001 : Room
         }
     }
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         StartCoroutine(ShowTutorialDialogue());
     }

@@ -770,7 +770,7 @@ GameObject:
   - component: {fileID: 114427155985026568}
   - component: {fileID: 95254515830605704}
   - component: {fileID: 60511309909998980}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DoorToLab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -906,6 +906,7 @@ GameObject:
   - component: {fileID: 114346889001470472}
   - component: {fileID: 95360842241747904}
   - component: {fileID: 114282398975172056}
+  - component: {fileID: 82139829455082378}
   m_Layer: 9
   m_Name: BeetleEnemy 1
   m_TagString: Untagged
@@ -1022,7 +1023,7 @@ GameObject:
   - component: {fileID: 114935753163115402}
   - component: {fileID: 95599823277329670}
   - component: {fileID: 60825625255261886}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DoorToRogersHouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1122,7 +1123,7 @@ GameObject:
   - component: {fileID: 114542475385527456}
   - component: {fileID: 95523455556876492}
   - component: {fileID: 60856352314985750}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DoorToLab--up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1448,6 +1449,7 @@ GameObject:
   - component: {fileID: 114152526513278440}
   - component: {fileID: 95274080511793984}
   - component: {fileID: 114270075568222372}
+  - component: {fileID: 82958071026466208}
   m_Layer: 9
   m_Name: BeetleEnemy 1 (1)
   m_TagString: Untagged
@@ -1880,7 +1882,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1329829181614780}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 16.079124, y: 4.2114415, z: 1}
   m_Children:
   - {fileID: 4974994098526744}
@@ -4152,6 +4154,166 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 2.5}
   m_EdgeRadius: 0
+--- !u!82 &82139829455082378
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1550282643986314}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c5f49bcd9e88ad24ba7d7bf974c4e189, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 10
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!82 &82958071026466208
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1871736025667920}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5eeb4df2ccbe0c54a97d487f81a916fd, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 10
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95076126342943980
 Animator:
   serializedVersion: 3
@@ -4361,7 +4523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   room: {fileID: 114868225379914818}
-  destination: {fileID: 114944950971711260, guid: 679a459c3e1204d4d9e84fa09bee94c9,
+  destination: {fileID: 114608059741512320, guid: 99476a34c046e7d40b449043a9728078,
     type: 2}
   isEntering: 0
   energyBeamDoor: {fileID: 114427155985026568}
@@ -4380,6 +4542,8 @@ MonoBehaviour:
   hasIFrames: 0
   smallEnergyContainerDropChange: 0.3
   bigEnergyContainerDropChange: 0.1
+  onImpact: {fileID: 8300000, guid: 7549ccc73d310944bb94ac06ac3d1ea9, type: 3}
+  onDeath: {fileID: 8300000, guid: edef6a9f852b15442b0faa4170fcfb5a, type: 3}
   smallEnergyContainer: {fileID: 114730864287668364, guid: 404062cd76f536c41b3acef745b67a0d,
     type: 2}
   bigEnergyContainer: {fileID: 114730864287668364, guid: 843678df898bf6842bca33442398abe3,
@@ -4399,6 +4563,8 @@ MonoBehaviour:
   hasIFrames: 0
   smallEnergyContainerDropChange: 0.3
   bigEnergyContainerDropChange: 0.1
+  onImpact: {fileID: 8300000, guid: 7549ccc73d310944bb94ac06ac3d1ea9, type: 3}
+  onDeath: {fileID: 8300000, guid: edef6a9f852b15442b0faa4170fcfb5a, type: 3}
   smallEnergyContainer: {fileID: 114730864287668364, guid: 404062cd76f536c41b3acef745b67a0d,
     type: 2}
   bigEnergyContainer: {fileID: 114730864287668364, guid: 843678df898bf6842bca33442398abe3,
@@ -4486,7 +4652,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1329829181614780}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a16f55ec1818d91428166031813e42ea, type: 3}
   m_Name: 
@@ -4538,6 +4704,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shouldDespawn: 0
   uuid: c4f21de3-6400-4a00-8c0b-26c4fde3b930
+  tune:
+    name: townTune
+    clip: {fileID: 8300000, guid: 40ad187068acfca44a9bf5d80fa111ee, type: 3}
   doorToLab: {fileID: 114427155985026568}
   boulder: {fileID: 1199584491799874}
   tutorialDialogue:

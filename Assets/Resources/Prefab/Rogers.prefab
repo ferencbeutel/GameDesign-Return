@@ -71,6 +71,7 @@ GameObject:
   - component: {fileID: 114702043297674788}
   - component: {fileID: 61750129872121116}
   - component: {fileID: 50941782942911690}
+  - component: {fileID: 82158263618261336}
   m_Layer: 8
   m_Name: Rogers
   m_TagString: Player
@@ -208,6 +209,86 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.54, y: 0.94}
   m_EdgeRadius: 0
+--- !u!82 &82158263618261336
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1772905099702116}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 10
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95887253184345032
 Animator:
   serializedVersion: 3
@@ -238,8 +319,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FacingRight: 1
   m_FacingUp: 0
-  m_MaxSpeed: 10
   m_JumpForce: 800
+  m_MaxSpeed: 10
   m_CrouchSpeed: 0.36
   m_AirControl: 1
   m_WhatIsGround:
@@ -297,12 +378,19 @@ MonoBehaviour:
     type: 2}
   rogersPlasmaWeapon: {fileID: 114741814606479336, guid: 24e9888c31e2eca418c42a9c6ea6dc89,
     type: 2}
-  readDiary: 0
-  activatedEnergySwitch: 0
-  seenTutorialText: 0
-  seenTownDialogue: 0
-  seenEnergySwitchDialogue: 0
-  seenEntryDialogue: 0
+  onDamage: {fileID: 8300000, guid: 30d717f2c6adb154ca166d50a393949f, type: 3}
+  onDeath: {fileID: 8300000, guid: 30d717f2c6adb154ca166d50a393949f, type: 3}
+  activatedEnergySwitch_001: 0
+  readDiary_002: 0
+  activatedEnergySwitch_003: 0
+  encounteredBoss_006: 0
+  seenEnergyTechupTutorial: 0
+  seenTutorialText_001: 0
+  seenTownDialogue_001: 0
+  seenEnergySwitchDialogue_001: 0
+  seenHighJumpTutorial_003: 0
+  seenEnergySwitchDialogue_003: 0
+  seenLastWarning_006: 0
 --- !u!212 &212055483750137330
 SpriteRenderer:
   m_ObjectHideFlags: 1

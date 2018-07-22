@@ -12,7 +12,7 @@ public abstract class Damageable : MonoBehaviour
     float invincibilitySecondsAfterDamage = 2f;
     float timeStampLastDamageTaken = -2f;
 
-    void Start()
+    protected virtual void Start()
     {
         currentHealth = maxHealth;
     }
@@ -32,6 +32,8 @@ public abstract class Damageable : MonoBehaviour
     }
 
     public abstract void OnDeath();
+
+    public abstract void OnDamageApplied();
 
     public float getCurrentHealth()
     {
@@ -61,6 +63,7 @@ public abstract class Damageable : MonoBehaviour
         {
             currentHealth -= damage;
             timeStampLastDamageTaken = Time.time;
+            OnDamageApplied();
         }
     }
 

@@ -3866,6 +3866,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shouldDespawn: 0
   uuid: 7b80d5db-958c-4499-a9cb-1eabe3cc34e2
+  tune:
+    name: labTune
+    clip: {fileID: 8300000, guid: 3912d92666371a049a5b323d19b63997, type: 3}
 --- !u!212 &212012944747229042
 SpriteRenderer:
   m_ObjectHideFlags: 1

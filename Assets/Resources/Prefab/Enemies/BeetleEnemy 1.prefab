@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114802884043245376}
   - component: {fileID: 95063401934121090}
   - component: {fileID: 114110918787712518}
+  - component: {fileID: 82117497924068416}
   m_Layer: 9
   m_Name: BeetleEnemy 1
   m_TagString: Untagged
@@ -91,6 +92,86 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.86, y: 0.58}
   m_EdgeRadius: 0
+--- !u!82 &82117497924068416
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1846536669082442}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5eeb4df2ccbe0c54a97d487f81a916fd, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95063401934121090
 Animator:
   serializedVersion: 3
@@ -123,6 +204,8 @@ MonoBehaviour:
   hasIFrames: 0
   smallEnergyContainerDropChange: 0.3
   bigEnergyContainerDropChange: 0.1
+  onImpact: {fileID: 0}
+  onDeath: {fileID: 0}
   smallEnergyContainer: {fileID: 114730864287668364, guid: 404062cd76f536c41b3acef745b67a0d,
     type: 2}
   bigEnergyContainer: {fileID: 114730864287668364, guid: 843678df898bf6842bca33442398abe3,

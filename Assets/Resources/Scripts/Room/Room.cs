@@ -6,6 +6,12 @@ public abstract class Room : MonoBehaviour
 {
     public bool shouldDespawn = false;
     public string uuid;
+    public Tune tune;
+
+    protected virtual void Start()
+    {
+        GameObject.FindObjectOfType<MusicManager>().PlayTune(tune);
+    }
 
     protected virtual void Update()
     {

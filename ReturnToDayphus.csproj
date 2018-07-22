@@ -286,10 +286,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Level004.cs" />
-    <Compile Include="Assets\Level005.cs" />
     <Compile Include="Assets\Resources\Scripts\Activateable\Activateable.cs" />
     <Compile Include="Assets\Resources\Scripts\AI\CarefulWalk.cs" />
+    <Compile Include="Assets\Resources\Scripts\Boss4711.cs" />
+    <Compile Include="Assets\Resources\Scripts\BossEncounter.cs" />
     <Compile Include="Assets\Resources\Scripts\Camera\Camera2DFollow.cs" />
     <Compile Include="Assets\Resources\Scripts\Camera\CameraEffects.cs" />
     <Compile Include="Assets\Resources\Scripts\Camera\Parallax.cs" />
@@ -306,7 +306,9 @@
     <Compile Include="Assets\Resources\Scripts\Door\EnergyBeamDoor.cs" />
     <Compile Include="Assets\Resources\Scripts\Door\EnergyBeamDoorTrigger.cs" />
     <Compile Include="Assets\Resources\Scripts\Enemy\Enemy.cs" />
+    <Compile Include="Assets\Resources\Scripts\FinalWarningTrigger.cs" />
     <Compile Include="Assets\Resources\Scripts\GameInitializer.cs" />
+    <Compile Include="Assets\Resources\Scripts\GameOverTrigger.cs" />
     <Compile Include="Assets\Resources\Scripts\HighJumpPlatform.cs" />
     <Compile Include="Assets\Resources\Scripts\Interactable\EnergySwitch.cs" />
     <Compile Include="Assets\Resources\Scripts\Interactable\Interactable.cs" />
@@ -315,7 +317,12 @@
     <Compile Include="Assets\Resources\Scripts\Level002\Level002.cs" />
     <Compile Include="Assets\Resources\Scripts\Level002\RogersHouseDiary.cs" />
     <Compile Include="Assets\Resources\Scripts\Level003\Level003.cs" />
+    <Compile Include="Assets\Resources\Scripts\Level004.cs" />
+    <Compile Include="Assets\Resources\Scripts\Level005.cs" />
+    <Compile Include="Assets\Resources\Scripts\Level006.cs" />
     <Compile Include="Assets\Resources\Scripts\MenuInitializer.cs" />
+    <Compile Include="Assets\Resources\Scripts\Music\MusicManager.cs" />
+    <Compile Include="Assets\Resources\Scripts\Music\Tune.cs" />
     <Compile Include="Assets\Resources\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Resources\Scripts\Player\Player2D.cs" />
     <Compile Include="Assets\Resources\Scripts\Player\PlayerController.cs" />
